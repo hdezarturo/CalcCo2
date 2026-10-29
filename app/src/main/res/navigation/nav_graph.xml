@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.calcco2.HomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_form"
+            app:destination="@id/formFragment" />
+        <action
+            android:id="@+id/action_home_to_info"
+            app:destination="@id/infoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.example.calcco2.FormFragment"
+        android:label="Formulario"
+        tools:layout="@layout/fragment_form">
+        <action
+            android:id="@+id/action_form_to_result"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.calcco2.ResultFragment"
+        android:label="Resultado"
+        tools:layout="@layout/fragment_result">
+        <argument
+            android:name="electricidad"
+            app:argType="float" />
+        <argument
+            android:name="autoKm"
+            app:argType="float" />
+        <argument
+            android:name="residuo"
+            app:argType="float" />
+        <argument
+            android:name="papel"
+        app:argType="float" />
+        <action
+            android:id="@+id/action_result_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.calcco2.InfoFragment"
+        android:label="ODS 9"
+        tools:layout="@layout/fragment_info">
+        <action
+            android:id="@+id/action_info_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculadora de Huella de Carbono"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconHome"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_carbon_footprint"
+        app:layout_constraintTop_toBottomOf="@id/titleHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/descriptionHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calcula las emisiones de CO₂ de tu empresa y descubre cómo reducir su impacto ambiental."
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/iconHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/btnGoToForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Comenzar cálculo"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/descriptionHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp" />
+
+    <Button
+        android:id="@+id/btnGoToInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Conoce el ODS 9"
+        android:textAllCaps="false"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        app:layout_constraintTop_toBottomOf="@id/btnGoToForm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

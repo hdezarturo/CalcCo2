@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Título principal -->
+    <TextView
+        android:id="@+id/titleResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado de Huella"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/labelTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Huella de carbono total:"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/titleResult"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/totalCO2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00 tCO₂e"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        app:layout_constraintTop_toBottomOf="@id/labelTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/labelBreakdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resumen:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/totalCO2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/desgloseText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Electricidad: 0.00 t\nAuto: 0.00 t\nVuelos: 0.00 t"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/labelBreakdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/recomendacionesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recomendaciones para reducir"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/desgloseText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/recomendacionesText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="• Cambiar a energías renovables\n• Optimizar rutas de transporte\n• Reducir residuos y fomentar reciclaje"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:lineSpacingExtra="6dp"
+        app:layout_constraintTop_toBottomOf="@id/recomendacionesTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnBackHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Volver al inicio"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

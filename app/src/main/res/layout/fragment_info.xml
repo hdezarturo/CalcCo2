@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+        <TextView
+            android:id="@+id/titleInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ODS 9: Industria, Innovación e Infraestructura"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="El ODS 9 es el noveno Objetivo de Desarrollo Sostenible de la Organización de las Naciones Unidas. Busca construir infraestructuras resilientes, promover la industrialización inclusiva y sostenible, y fomentar la innovación. \n\nEsta calculadora contribuye al ODS 9 al ayudar a las empresas a medir su huella de carbono y adoptar tecnologías limpias, impulsando una industria más sostenible."
+            android:textSize="16sp"
+            android:lineSpacingExtra="8dp"
+            app:layout_constraintTop_toBottomOf="@id/titleInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- Separador visual -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:alpha="0.3"
+            app:layout_constraintTop_toBottomOf="@id/infoText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- Título de factores -->
+        <TextView
+            android:id="@+id/factorsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Factores de emisión utilizados"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Lista de factores (texto plano) -->
+        <TextView
+            android:id="@+id/factorsList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Electricidad: 0.444 kg CO₂/kWh\n   Fuente: CRE / SENER (México, 2024)\n\n Automóvil: 0.185 kg CO₂/km\n   Fuente: Climatiq / DEFRA (2025)\n\n Residuos sólidos: 0.4 kg CO₂/kg\n   Fuente: IPCC / estudios LCA (promedio)\n\n Papel: 1.2 kg CO₂/kg\n   Fuente: ecoinvent / EPA (promedio)"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/factorsTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp" />
+
+
+
+
+
+        <Button
+            android:id="@+id/btnBackHomeInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Volver al inicio"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/factorsList"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
